@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE ftpserverconfigurations [
+  <!ELEMENT ftpserverconfigurations ANY>
+  <!ELEMENT ftpserverconfiguration ANY>
+  <!ELEMENT additionalfolders ANY>
+  <!ELEMENT additionalfolder ANY>
+  <!ATTLIST ftpserverconfiguration id ID #REQUIRED>
+]>
+
+<!-- This xml file contains the configurations for the ftp servers, please specify the password as a base 64 -->
+<!-- The LocalDirectoryPath is the path on the remote machine where the filess will be copied-->
+<!-- Additional folders to be copied over can be added, but these ones are not recursively copied-->
+<ftpserverconfigurations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ftpserverconfiguration id="TestId" IP="127.0.0.1" User="TestUser" Password="VGVzdFBhc3N3b3Jk"
+    LocalDirectoryPath="D:\FtpServerTestFolder"
+    FtpCommandFileName="ftpRecursiveCopy.ftp" FtpFileOutputDirectory="C:\Users\{user}\Desktop">
+    <!--<additionalfolders>
+      <additionalfolder Path="">
+      </additionalfolder>
+    </additionalfolders>-->
+  </ftpserverconfiguration>
+</ftpserverconfigurations>
